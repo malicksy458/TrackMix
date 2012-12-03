@@ -15,4 +15,6 @@
     // Insert code here to initialize your application
 }
 
+- (IBAction)volume:(id)sender {
+}
 @end

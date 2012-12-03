@@ -17,6 +17,7 @@
 		5464A33A1652A55700901FFA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5464A31A1652A55700901FFA /* Cocoa.framework */; };
 		5464A3421652A55800901FFA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5464A3401652A55800901FFA /* InfoPlist.strings */; };
 		5464A3451652A55800901FFA /* TrackMixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5464A3441652A55800901FFA /* TrackMixTests.m */; };
+		5464A3501652ABE500901FFA /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 5464A34F1652ABE500901FFA /* Track.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		542920FB1652DC4500E510CC /* DTPerformanceSession.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DTPerformanceSession.framework; path = Library/Frameworks/DTPerformanceSession.framework; sourceTree = DEVELOPER_DIR; };
 		5464A3161652A55700901FFA /* TrackMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5464A31A1652A55700901FFA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5464A31D1652A55700901FFA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -49,6 +51,8 @@
 		5464A3411652A55800901FFA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5464A3431652A55800901FFA /* TrackMixTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackMixTests.h; sourceTree = "<group>"; };
 		5464A3441652A55800901FFA /* TrackMixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackMixTests.m; sourceTree = "<group>"; };
+		5464A34E1652ABE500901FFA /* Track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Track.h; sourceTree = "<group>"; };
+		5464A34F1652ABE500901FFA /* Track.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Track.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,7 @@
 		5464A30B1652A55700901FFA = {
 			isa = PBXGroup;
 			children = (
+				542920FB1652DC4500E510CC /* DTPerformanceSession.framework */,
 				5464A3201652A55700901FFA /* TrackMix */,
 				5464A33D1652A55800901FFA /* TrackMixTests */,
 				5464A3191652A55700901FFA /* Frameworks */,
@@ -118,6 +123,8 @@
 				5464A32D1652A55700901FFA /* AppDelegate.m */,
 				5464A32F1652A55700901FFA /* MainMenu.xib */,
 				5464A3211652A55700901FFA /* Supporting Files */,
+				5464A34E1652ABE500901FFA /* Track.h */,
+				5464A34F1652ABE500901FFA /* Track.m */,
 			);
 			path = TrackMix;
 			sourceTree = "<group>";
@@ -263,6 +270,7 @@
 			files = (
 				5464A3271652A55700901FFA /* main.m in Sources */,
 				5464A32E1652A55700901FFA /* AppDelegate.m in Sources */,
+				5464A3501652ABE500901FFA /* Track.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +385,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrackMix/TrackMix-Prefix.pch";
 				INFOPLIST_FILE = "TrackMix/TrackMix-Info.plist";
@@ -389,6 +401,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TrackMix/TrackMix-Prefix.pch";
 				INFOPLIST_FILE = "TrackMix/TrackMix-Info.plist";
@@ -446,6 +462,7 @@
 				5464A34A1652A55800901FFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5464A34B1652A55800901FFA /* Build configuration list for PBXNativeTarget "TrackMixTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +471,7 @@
 				5464A34D1652A55800901FFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
